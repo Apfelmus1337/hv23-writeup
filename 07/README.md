@@ -1,5 +1,14 @@
 # [HV23.07] The golden book of Santa
 
+## Introduction
+
+Difficulty: Easy<br>
+Author: darkstar
+
+An employee found out that someone is selling secret information from Santa's golden book. For security reasons, the service for accessing the book was immediately stopped and there is now only a note about the maintenance work. However, it still seems possible that someone is leaking secret data.
+
+## Solution
+
 The website always returns a static image, no matter how we request to it, after looking around for a bit I noticed that it is using `Transfer-Encoding: chunked` for the image it returns, looking at it through `ncat` we can see the individual chunks, where the first chunk is `948`.
 
 This is highly suspicious because `H` is the first character of the flag and `48` in hex, so I wrote a small script to decode the flag.

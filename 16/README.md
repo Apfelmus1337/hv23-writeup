@@ -1,5 +1,14 @@
 # [HV23.16] Santa's Gift Factory
 
+## Introduction
+
+Difficulty: Hard<br>
+Author: Fabi_07
+
+Did you know that Santa has its own factory for making gifts? Maybe you can exploit it to get your own special gift!
+
+## Solution
+
 I've deleted all my writeups on accident on Day 20 and I will not go through this challenge a second time, I am sorry. (Not really, I hated this challenge)
 
 ```py

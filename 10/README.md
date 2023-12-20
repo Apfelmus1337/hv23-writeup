@@ -1,5 +1,14 @@
 # [HV23.10] diy-jinja
 
+## Introduction
+
+Difficulty: Medium<br>
+Author: coderion
+
+We've heard you like to create your own forms. With SANTA (Secure and New Template Automation), you can upload your own jinja templates and have the convenience of HTML input fields to have your friends fill them out! Obviously 100% secure and even with anti-tampering protection!
+
+## Solution
+
 This one I solved differently from my current solution during Hackvent, but well, it also got nuked during my git-typo and I couldn't replicate my payload afterwards.
 
 The server is  giving us the option to upload our own jinja template files, but only lowercase characters are allowed between the `{{}}` of jinja. So I looked in different places and noticed that our user input for form field names and description is reflected on the form submission page, the only restriction being that we can't use `"` or `'` in our payload, we can still get RCE by using the following payload.

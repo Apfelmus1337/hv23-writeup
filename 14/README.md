@@ -9,6 +9,15 @@ To keep today's flag save, Santa encrypted it, but now the elf cannot figure out
 
 ## Solution
 
+## Introduction
+
+Difficulty: Medium<br>
+Author: LogicalOverflow
+
+To keep today's flag save, Santa encrypted it, but now the elf cannot figure out how to decrypt it. The tool just crashes all the time. Can you still recover the flag?
+
+## Solution
+
 We are given two files, a binary and a `.zst` file, which turns out to be a coredump, after analyzing it with `gdb` and the binary statically using IDA, I found out the offsets of the Ciphertext, Key and IV inside the coredump, which can be extracted using `gdb`.
 
 ```gdb

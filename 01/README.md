@@ -1,5 +1,14 @@
 # [HV23.01] A letter from Santa
 
+## Introduction
+
+Difficulty: Easy<br>
+Author: coderion
+
+Finally, after 11 months of resting, Santa can finally send out his presents and challenges again. He was writing a letter to his youngest baby elf, who's just learning his **ABC/A-Z**'s. Can you help the elf read the message?
+
+## Solution
+
 The website takes two different types of user input, a character of the alphabet, and then text, after playing around with it for a bit, I started to notice that the character `a` prints the top-most row of a QR-Code, so after writing a short script, we are rewarded with a QR-Code that contains the flag.
 
 ```py

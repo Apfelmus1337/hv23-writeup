@@ -1,5 +1,14 @@
 # [HV23.11] Santa's Pie
 
+## Introduction
+
+Difficulty: Medium<br>
+Author: coderion
+
+Santa baked you a pie with hidden ingredients!
+
+## Solution
+
 We are given the following image and have to do some stego... fun!
 
 ![Santa's Pie](pie.png)

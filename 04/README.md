@@ -1,5 +1,14 @@
 # [HV23.04] Bowser
 
+## Introduction
+
+Difficulty: Easy<br>
+Author: veganjay
+
+Santa has heard that some kids appreciate a video game as a christmas gift. He would rather have the kids solve some CTF challenges, so he took some inspiration and turned it into a challenge. Can you save the princess?
+
+## Solution
+
 This was the first reversing challenge, we are given an executable called bowser, which prints a big ASCII-Art of Bowser, there's also a really simple check for a supplied `argv[1]`, but after supplying `mario`, which should be correct according to BinaryNinja, we are given `Sorry, your flag is in another castle.`
 
 BinaryNinja decompile:

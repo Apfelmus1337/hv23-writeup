@@ -1,5 +1,16 @@
 # [HV23.08] SantaLabs bask
 
+## Introduction
+
+Difficulty: Medium<br>
+Author: coderion
+
+Ditch flask and complicated python. With SantaLabs bask, you can write interactive websites using good, old bash and even template your files by using dynamic scripting!
+
+Please note that the snowflake animation upon visiting the website may not show on certain browsers and systems. In case this occurs, try another browser.
+
+## Solution
+
 This one was a pain, half of the time the webserver just didn't give a response, but in the end it was a relatively simple challenge.
 
 Looking at the source we are given, we can see two different places where Logins are handled.

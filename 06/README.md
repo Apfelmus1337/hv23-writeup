@@ -1,5 +1,14 @@
 # [HV23.06] Santa should use a password manager
 
+## Introduction
+
+Difficulty: Easy<br>
+Author: wangibangi
+
+Santa is getting old and has troubles remembering his password. He said password Managers are too complicated for him and he found a better way. So he screenshotted his password and decided to store it somewhere handy, where he can always find it and where its easy to access.
+
+## Solution
+
 We are given a memory dump where we first scan for all files in the memory:
 
 `py vol.py -f memory.raw windows.filescan.FileScan` 

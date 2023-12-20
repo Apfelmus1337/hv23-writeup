@@ -1,5 +1,14 @@
 # [HV23.19] Santa's Minecraft Server
 
+## Introduction
+
+Difficulty: Hard<br>
+Author: nichtseb
+
+Santa likes to play minecraft. His favorite version is 1.16. For security reasons, the server is not publicly accessible. But Santa is a little show-off, so he has an online map to brag about his fabulous building skills.
+
+## Solution
+
 Minecraft + Hackvent, hell yeah.
 
 The description of the challenge tells us that the server is running on Minecraft 1.16, a pretty old version, the server itself is not accessible tho, only a Webinterface called [Dynmap](https://github.com/webbukkit/dynmap) is.
