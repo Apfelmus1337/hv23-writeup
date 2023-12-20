@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SANTA</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+    * {
+      font-family: Consolas, monaco, monospace;
+    }
+    body {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+      background-size: 1800% 1800%;
+      animation: rainbow 18s ease infinite;
+    }
+    @keyframes rainbow {
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    h3 {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <h3 class="mb-4"><b>SANTA</b> (Secure and New Template Automation)</h3>
+      <form
+        id="uploadForm"
+        action="/upload"
+        method="post"
+        enctype="multipart/form-data"
+        class="bg-white p-3 rounded shadow"
+      >
+        <div class="form-group">
+          <label for="template">Select Jinja Template File</label>
+          <input
+            type="file"
+            class="form-control-file"
+            id="template"
+            name="template"
+            required
+          />
+        </div>
+        <div id="fieldsContainer" class="form-group">
+          <label>Fields</label>
+          <br>
+          <button
+            type="button"
+            class="btn btn-primary btn-sm mb-2"
+            onclick="addField()"
+          >
+            Add Field
+          </button>
+          <!-- JavaScript will append field inputs here -->
+        </div>
+        <button type="submit" class="btn btn-success">Upload</button>
+      </form>
+    </div>
+
+    <script>
+      function addField() {
+        const container = document.getElementById("fieldsContainer");
+        const fieldDiv = document.createElement("div");
+        fieldDiv.classList.add("input-group", "mb-3");
+        fieldDiv.innerHTML = `
+        <input type="text" class="form-control" placeholder="Field Name" name="fieldNames[]" required>
+        <input type="text" class="form-control" placeholder="Description" name="descriptions[]" required>
+        <div class="input-group-append">
+            <button class="btn btn-outline-danger" type="button" onclick="removeField(this)">Remove</button>
+        </div>
+    `;
+        container.appendChild(fieldDiv);
+      }
+
+      function removeField(btn) {
+        btn.closest(".input-group").remove();
+      }
+
+      document.getElementById("uploadForm").onsubmit = function (event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const fieldNames = Array.from(
+          document.querySelectorAll('input[name="fieldNames[]"]'),
+        );
+        const descriptions = Array.from(
+          document.querySelectorAll('input[name="descriptions[]"]'),
+        );
+        const fields = fieldNames.map((fieldName, index) => {
+          return {
+            name: fieldName.value,
+            description: descriptions[index].value,
+          };
+        });
+        formData.append("fields", JSON.stringify(fields));
+
+        axios
+          .post("/upload", formData)
+          .then(function (response) {
+            window.location.href = response.request.responseURL;
+          })
+          .catch(function (error) {
+            alert("Upload failed.");
+          });
+      };
+    </script>
+  </body>
+</html>
