@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SANTA</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+    * {
+      font-family: Consolas, monaco, monospace;
+    }
+    body {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+      background-size: 1800% 1800%;
+      animation: rainbow 18s ease infinite;
+    }
+    @keyframes rainbow {
+        0%{background-position:0% 82%}
+        50%{background-position:100% 19%}
+        100%{background-position:0% 82%}
+    }
+    h5  {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <h5>Fill out form <b>{{ template_id }}</b></h5>
+      <form
+        action="{{ url_for('render_form', template_id=template_id) }}"
+        method="post"
+        class="bg-white p-3 rounded shadow"
+      >
+        {% for field in fields %}
+        <div class="form-group">
+          <label for="{{ field.name }}">{{ field.description }}</label>
+          <input
+            type="text"
+            class="form-control"
+            id="{{ field.name }}"
+            name="{{ field.name }}"
+            required
+          />
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-success">Generate</button>
+      </form>
+    </div>
+  </body>
+</html>
