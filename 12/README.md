@@ -1,5 +1,16 @@
 # [HV23.12] unsanta
 
+## Introduction
+
+Difficulty: Medium<br>
+Author: kuyaya
+
+To train his skills in cybersecurity, Grinch has played this year's SHC qualifiers. He was inspired by the cryptography challenge unm0unt41n (can be found [here](https://library.m0unt41n.ch/)) and thought he might play a funny prank on Santa. Grinch is a script kiddie and stole the malware idea and almost the whole code. Instead of using the original encryption malware from the challenge though, he improved it a bit so that no one can recover his secret!
+
+Luckily, Santa had a backup of one of the images. Maybe this can help you find the secret and recover all of Santa's lost data...?
+
+## Solution
+
 Oh boy, this one was painful, first I saw random, I used randcrack, recovered the two other memes, and got made fun of, I don't have it anymore because of my git-typo, but the second meme basically said "I see random, I use randcrack" and the second meme was a RickRoll as per usual.
 
 After some time while trying to solve the challenge I stumbled upon a really similar challenge, where you had to recover the seed of a python random initialization, which led me to the following Git Repo: [RNGeesus](https://github.com/deut-erium/RNGeesus), this library provided a POC to recover a seed from a Mersenne Twister state.

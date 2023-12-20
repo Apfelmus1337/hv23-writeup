@@ -1,5 +1,14 @@
 # [HV23.18] Evil USB
 
+## Introduction
+
+Difficulty: Hard<br>
+Author: coderion
+
+An engineer at SantaSecCorp has found a suspicious device stuck in the USB port of his computer. It doesn't seem to work anymore, but we managed to dump the firmware for you. Please help us find out what the device did to their computer.
+
+## Solution
+
 After initially running `strings` on the provided firmware, I noticed some interesting strings, so I knew I had to search for `base64`-encoded data, which I did not seem to find.
 
 ```

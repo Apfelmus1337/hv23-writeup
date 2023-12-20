@@ -1,5 +1,14 @@
 # [HV23.03] Santa's grille
 
+## Introduction
+
+Difficulty: Easy<br>
+Author: brp64
+
+While contemplating the grille and turning some burgers, Santa decided to send all the hackers worldwide some season's greetings.
+
+## Solution
+
 We are given a weird image and after searching for a `grille cipher` as suspected from the challenge name, I found out that it is a cipher where you create holes in the so-called `grille` and rotate the `grille/ciphertext` after each reading.
 
 ![ciphertext](ciphertext.png)

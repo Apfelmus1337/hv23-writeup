@@ -1,5 +1,14 @@
 # [HV23.13] Santa's Router
 
+## Introduction
+
+Difficulty: Medium<br>
+Author: Fabi_07
+
+Santa came across a weird service that provides something with signatures of a firmware. He isn't really comfortable with all that crypto stuff, can you help him with this?
+
+## Solution
+
 A router with firmware update capabilities, how nice of Santa.
 
 After checking the source code for some time, I realized that the `hasFile` function, had a serious flaw, it always `XOR`'ed 8-byte chunks to the current hash.

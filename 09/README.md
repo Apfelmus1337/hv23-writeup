@@ -1,5 +1,14 @@
 # [HV23.09] Passage encrypytion
 
+## Introduction
+
+Difficulty: Medium<br>
+Author: dr_nick
+
+Santa looked at the network logs of his machine and noticed that one of the elves browsed a weird website. He managed to get the pcap of it, and it seems as though there is some sensitive information in there?!
+
+## Solution
+
 We are given a `pcapng` file, after opening it up in WireShark we can see some requests being made to a website to transfer a "secret", it is sending a list of doors in the following order:
 
 `2239869409783327317220697624099369`, which is `6E6F20666C616720686572653A29` in hex, if interpreted as a single number. This decodes to `no flag here:)`, nice.

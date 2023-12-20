@@ -1,5 +1,18 @@
 # [HV23.20] Santa's Candy Cane Machine
 
+## Introduction
+
+Difficulty: Hard<br>
+Author: keep3r
+
+As Santa wanted to start producing Candy Canes for this years christmas season, his machine wouldn't work anymore. All he got was some error message about an "expired license". Santa tried to get support from the manufacturer. Unfortunately, the company is out of business since many years.
+
+One of the elves already tried his luck but all he got out of the machine was a .dll!
+
+Can you help Santa license his Candy Cane machine and make all those kids happy for this years christmas?
+
+## Solution
+
 This was a really nice dotNET reversing challenge and after looking at the supplied DLL for quite some time, I noticed that you can just create CandyCaneLicense objects with a Serial, and if all internal checks pass, you get returned the license object which you can then use to validate the license itself and check to see if it is expired or not. 
 
 So I did not really expect the following code to work, but after a few seconds of generating completely random Serials, I got a valid one. I then cleaned up the code to also generate a Premium Serial which I then used for [[HV23.H3] Santa's Secret](../H3/)
