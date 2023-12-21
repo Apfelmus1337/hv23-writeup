@@ -5,7 +5,7 @@
 Difficulty: 1337<br>
 Author: TBD
 
-TND
+TBD
 
 ## Solution
 
