@@ -28,11 +28,11 @@
 [[HV23.18] Evil USB](./18/)<br>
 [[HV23.19] Santa's Minecraft Server](./19/)<br>
 [[HV23.20] Santa's Candy Cane Machine](./20/)<br>
-[[HV23.21] TBD](./21/)<br>
+[[HV23.21] Shopping List](./21/)<br>
 
 ## 1337 Challenges
 
-[[HV23.22] TBD](./22/)<br>
+[[HV23.22] Secure Gift Wrapping Service](./22/)<br>
 [[HV23.23] TBD](./23/)<br>
 [[HV23.24] TBD](./24/)<br>
 
