@@ -312,6 +312,6 @@ if __name__ == '__main__':
 
 The correct QR was then found after exactly `4919` shuffles at index `4918`, which funnily enough is `0x1337`.
 
-![flag](./out/4918.png)
+![flag](out/4918.png)
 
 Flag: `HV23{J4y_M1n3r_4nd_M17chy_m4d3_17_p0551bl3!!!}`
