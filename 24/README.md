@@ -305,7 +305,7 @@ if __name__ == '__main__':
         qr = check_qr_from_bytes(cur_shuffled)
         if qr:
             print(f"[+] Index: {i}")
-            print(f"[+] Flag: {qr}")
+            print(f"[+] Flag: {qr[0].data}")
             print(f"[+] Time Taken: {time.perf_counter() - start:02f}s")
             save_qr_from_bytes(i, cur_shuffled)
 ```
