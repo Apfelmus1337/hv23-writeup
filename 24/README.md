@@ -308,6 +308,7 @@ if __name__ == '__main__':
             print(f"[+] Flag: {qr[0].data}")
             print(f"[+] Time Taken: {time.perf_counter() - start:02f}s")
             save_qr_from_bytes(i, cur_shuffled)
+            exit()
 ```
 
 The correct QR was then found after exactly `4919` shuffles at index `4918`, which funnily enough is `0x1337`.
