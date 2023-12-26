@@ -15,7 +15,6 @@ After inspecting the code in `ghidra` using [ghidra-amiga](https://github.com/Ba
 
 ```c
 undefined4 scramble24Times(void)
-
 {
   undefined4 in_D0;
   short sVar1;
