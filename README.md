@@ -34,7 +34,7 @@
 
 [[HV23.22] Secure Gift Wrapping Service](./22/)<br>
 [[HV23.23] Roll your own RSA](./23/)<br>
-[[HV23.24] TBD](./24/)<br>
+[[HV23.24] Santa's Shuffled Surprise](./24/)<br>
 
 ## Hidden Challenges
 
